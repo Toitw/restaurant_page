@@ -68,8 +68,17 @@ menuOptions.forEach((option) => {
 });
 
 //Menu
+
+
 const menuLink = document.getElementById('menu-link');
 menuLink.addEventListener('click', loadMenu);
+const mainLink = document.getElementById('main-link');
+mainLink.addEventListener('click', () => {
+  const menuSection = document.querySelector('.menu');
+  if (menuSection) {
+    menuSection.remove();
+  }
+});
 
 
 
