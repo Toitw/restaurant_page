@@ -1,0 +1,64 @@
+/*HOME PAGE*/
+
+/* Reset some default styles */
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(img/main_background.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Keep the background behind the content */
+    opacity: 1;
+}
+
+/* Style the navigation bar */
+.nav {
+    z-index: 1;
+  }
+  
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 20px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+  .nav-list li {
+    margin-left: 20px;
+  }
+  
+  .nav-list li:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav-list li a:hover {
+    text-decoration: underline;
+  }
+
+
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: #d85028; /* Italian restaurant color */
+    color: white;
+    padding: 10px 0;
+}
