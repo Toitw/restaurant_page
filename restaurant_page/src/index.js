@@ -1,5 +1,7 @@
 import './style.css';
 import backImage from './img/main_background.jpg';
+import { loadMenu } from './menu.js';
+
 
 
 //Background image
@@ -43,26 +45,31 @@ nav.appendChild(addTitle());
 nav.appendChild(addNavList());
 
 //Nav options
-function addNavOption(text, link) {
+function addNavOption(text, link, id) {
     const listItem = document.createElement('li');
     const anchor = document.createElement('a');
     anchor.href = link;
     anchor.textContent = text;
+    anchor.id = id;
     listItem.appendChild(anchor);
     return listItem;
 }
 
 const menuOptions = [
-    { text: 'Main', link: '#' },
-    { text: 'Menu', link: '#' },
-    { text: 'Contact', link: '#' },
+    { text: 'Main', link: '#', id: 'main-link' },
+    { text: 'Menu', link: '#', id: 'menu-link' },
+    { text: 'Contact', link: '#', id: 'contact-link' },
 ];
 
 const navList = document.querySelector('.nav-list');
 
 menuOptions.forEach((option) => {
-    navList.appendChild(addNavOption(option.text, option.link));
+    navList.appendChild(addNavOption(option.text, option.link, option.id));
 });
+
+//Menu
+const menuLink = document.getElementById('menu-link');
+menuLink.addEventListener('click', loadMenu);
 
 
 
