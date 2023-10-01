@@ -24,6 +24,12 @@ function addNav() {
     return nav;
 }
 
+function addTitle() {
+    const title = document.createElement('h1');
+    title.textContent = 'The Odin Trattoria';
+    return title;
+}
+
 function addNavList() {
     const list = document.createElement('ul');
     list.classList.add('nav-list');
@@ -33,6 +39,7 @@ function addNavList() {
 const content = document.querySelector('.content');
 content.appendChild(addNav());
 const nav = document.querySelector('.nav');
+nav.appendChild(addTitle());
 nav.appendChild(addNavList());
 
 //Nav options
@@ -56,6 +63,7 @@ const navList = document.querySelector('.nav-list');
 menuOptions.forEach((option) => {
     navList.appendChild(addNavOption(option.text, option.link));
 });
+
 
 
 
