@@ -66,5 +66,8 @@ export function loadMenu() {
     }
   
     const content = document.querySelector('.content');
+    if (content.childNodes.length > 1) {
+        content.removeChild(content.childNodes[1]);
+    }
     content.appendChild(menuSection);
 }

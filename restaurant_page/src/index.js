@@ -1,6 +1,7 @@
 import './style.css';
 import backImage from './img/main_background.jpg';
 import { loadMenu } from './menu.js';
+import { loadContact } from './contact.js';
 
 
 
@@ -74,11 +75,14 @@ const menuLink = document.getElementById('menu-link');
 menuLink.addEventListener('click', loadMenu);
 const mainLink = document.getElementById('main-link');
 mainLink.addEventListener('click', () => {
-  const menuSection = document.querySelector('.menu');
-  if (menuSection) {
-    menuSection.remove();
-  }
+    const content = document.querySelector('.content');
+    if (content.childNodes.length > 1) {
+        content.removeChild(content.childNodes[1]);
+    }
 });
+
+const contactLink = document.getElementById('contact-link');
+contactLink.addEventListener('click', loadContact);
 
 
 
